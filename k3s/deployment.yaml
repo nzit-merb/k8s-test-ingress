@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: argocd-test-nginx
+  name: argocd-test-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: argocd-test-nginx
+  template:
+    metadata:
+      labels:
+        app: argocd-test-nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
