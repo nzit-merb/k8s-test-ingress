@@ -5,7 +5,7 @@ metadata:
     app: argocd-test-nginx
   name: argocd-test-nginx
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: argocd-test-nginx
